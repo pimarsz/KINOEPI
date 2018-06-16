@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="title.events_list">
+                <source>title.events_list</source>
+                <target>Lista Eventów</target>
+            </trans-unit>
+            <trans-unit id="title.event_view">
+                <source>title.event_view</source>
+                <target>Event #%id%</target>
+            </trans-unit>
+            <trans-unit id="label.back_to_list">
+                <source>label.back_to_list</source>
+                <target>Powrót do zakładek</target>
+            </trans-unit>
+            <trans-unit id="label.show_record">
+                <source>label.show_record</source>
+                <target>Pokaż rekord</target>
+            </trans-unit>
+            <trans-unit id="label.back_to_tags">
+                <source>label.back_to_tags</source>
+                <target>Powrót do tagów</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+
+

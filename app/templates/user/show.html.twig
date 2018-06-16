@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.screenings_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        <p class="text-warning"> {{ 'title.screenings_list'|trans }} </p>
+
+    </h1>
+    {% if users|length > 0 %}
+        <table class="table table-striped">
+            <tr>
+                <th>Id Usera</th>
+                <th>Login</th>
+                <th>Hasło</th>
+                <th>Id Roli</th>
+                <th>Edytuj</th>
+                <th>Usuń</th>
+            </tr>
+
+            {% for row in users %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.login }}</td>
+                    <td>
+                        {{ row.password }}
+                    </td>
+                    <td>
+                        {{ row.role_id}}
+                    </td>
+                    <td>
+                        <a href="{{ url('user_edit', {'id':row.id}) }}" title="{{ 'label.edit'|trans }}" class="btn btn-warning">
+                            {{ 'label.edit'|trans }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ url('user_delete', {'id':row.id}) }}" title="{{ 'label.delete'|trans }}" class="btn btn-warning">
+                            {{ 'label.delete'|trans }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div>
+            <a href="{{ url('movieList_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-dark">
+                {{ 'label.back_to_list'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            List is empty!
+        </div>
+    {% endif %}
+{% endblock %}

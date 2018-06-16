@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.screening_edit'|trans({'%id%': screening.screening_id}) }}{% endblock %}
+
+{% block body %}
+    {% form_theme form with ['bootstrap_4_horizontal_layout.html.twig'] %}
+    <h1>{{ 'title.screening_edit'|trans({'%id%': screening.screening_id}) }}</h1>
+    {{ form_start(form, { method: 'post', action: url('screening_edit', {'id': screening.screening_id}) }) }}
+    {{ form_widget(form) }}
+    <div class="row">
+        <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-success" />
+        {{ form_end(form) }}
+
+        <a href="{{ url('screening_show')}}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-dark">{{ 'label.back_to_list'|trans }}</a>
+    </div>
+{% endblock %}

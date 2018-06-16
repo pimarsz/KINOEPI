@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+   {{ 'title.screening_list'|trans }}
+{% endblock %}
+{% block body %}
+   <h1>
+       {{ 'title.screening_list'|trans }}
+    </h1>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Data</th>
+                <th>Godzina</th>
+                <th>Sala</th>
+                <th>Kup bilet</th>
+
+            </tr>
+            {% for row in screening %}
+               <tr>
+                   <td>{{ row.screening_date }}</td>
+                   <td>{{ row.screening_time }}</td>
+                   <td>{{ row.name }}</td>
+                   <td><a href="{{ url('order_add', {'id':row.screening_id})}}" title="{{ 'label.order_ticket'|trans }}"
+                          class="btn btn-warning"> {{ 'label.order_ticket'|trans }}
+                       </a>
+                   </td>
+               </tr>
+            {% endfor %}
+        </table>
+
+
+    <a href="{{ url('movieList_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-dark">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

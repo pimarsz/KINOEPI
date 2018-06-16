@@ -1,0 +1,16 @@
+body {
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    padding-top: 10px;
+    text-align: center;
+}
+body{
+    margin: 5%;
+}
+.nav-a nav-link btn{
+    display: inline-block;
+}

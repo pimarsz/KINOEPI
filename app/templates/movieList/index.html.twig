@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.movies_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        <p class="text-warning"> {{ 'title.movies_list'|trans }} </p>
+    </h1>
+    {% if movies|length > 0 %}
+        <table class="table table-striped">
+            <tr>
+                <th>Tytuł</th>
+                <th>Opis</th>
+                <th>Szczegóły</th>
+    {% if is_granted('ROLE_ADMIN') %}
+                <th>Edycja</th>
+                <th>Usuń</th>
+        {% endif %}
+            </tr>
+
+            {% for row in movies %}
+                <tr>
+                    <td>{{ row.movie_title }}</td>
+                    <td>{{ row.movie_description }}</td>
+                    <td>
+                        <a href="{{ url('movieList_view', {'id':row.movie_id}) }}" title="{{ 'label.view'|trans }}" class="btn btn-warning">
+                            {{ 'label.view'|trans }}</a>
+                    </td>
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <td>
+                        <a href="{{ url('movieList_edit', {'id':row.movie_id}) }}" title="{{ 'label.edit'|trans }}" class="btn btn-warning">
+                            {{ 'label.edit'|trans }}</a>
+
+                    </td>
+                    <td>
+                        <a href="{{ url('movieList_delete', {'id':row.movie_id}) }}" title="{{ 'label.delete'|trans }}" class="btn btn-warning">
+                            {{ 'label.delete'|trans }}</a>
+
+                    </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ url('movieList_add')}}" title="{{ 'label.add_movie'|trans }}" class="btn btn-dark">{{ 'label.add_movie'|trans }}</a>
+        <a href="{{ url('screening_add')}}" title="{{ 'label.add_screening'|trans }}" class="btn btn-dark">{{ 'label.add_screening'|trans }}</a>
+        <a href="{{ url('screening_show')}}" title="{{ 'label.show_screenings'|trans }}" class="btn btn-dark">{{ 'label.show_screenings'|trans }}</a>
+        <a href="{{ url('user_show')}}" title="{{ 'label.show_users'|trans }}" class="btn btn-dark">{{ 'label.show_users'|trans }}</a>
+        <a href="{{ url('transaction_show')}}" title="{{ 'label.show_transactions'|trans }}" class="btn btn-dark">{{ 'label.show_transactions'|trans }}</a>
+    {% endif %}
+    {% else %}
+        <div>
+            List is empty!
+        </div>
+    {% endif %}
+{% endblock %}

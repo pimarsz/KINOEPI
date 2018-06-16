@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="title.movies_list">
+                <source>title.movies_list</source>
+                <target>Repertuar</target>
+            </trans-unit>
+           <trans-unit id="title.screening_list">
+                <source>title.screening_list</source>
+                <target>Seanse filmu</target>
+            </trans-unit>
+            <trans-unit id="label.screening">
+                 <source>label.screening</source>
+                 <target>Seanse</target>
+             </trans-unit>
+
+            <trans-unit id="title.movie_delete">
+                <source>title.movie_delete</source>
+                <target>Usuń film</target>
+            </trans-unit>
+            <trans-unit id="label.delete">
+                <source>label.delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+            <trans-unit id="label.order_ticket">
+                <source>label.order_ticket</source>
+                <target>Zamów bilet</target>
+            </trans-unit>
+            <trans-unit id="title.movie_view">
+                <source>title.movie_view</source>
+                <target>Szczegóły o filmie</target>
+            </trans-unit>
+            <trans-unit id="label.view">
+                <source>label.view</source>
+                <target>Więcej</target>
+            </trans-unit>
+           <trans-unit id="label.add_movie">
+                <source>label.add_movie</source>
+                <target>Dodaj film</target>
+            </trans-unit>
+            <trans-unit id="label.add_screening">
+                <source>label.add_screening</source>
+                <target>Dodaj seans</target>
+            </trans-unit>
+            <trans-unit id="label.edit_screening">
+                <source>label.edit_screening</source>
+                <target>Edytuj seans</target>
+            </trans-unit>
+            <trans-unit id="label.edit">
+                <source>label.edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
+            <trans-unit id="label.back_to_list">
+                <source>label.back_to_list</source>
+                <target>Powrót do listy</target>
+            </trans-unit>
+            <trans-unit id="title.movie_add">
+                <source>title.movie_add</source>
+                <target>Dodaj film</target>
+            </trans-unit>
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Zapisz</target>
+            </trans-unit>
+            <trans-unit id="label.name">
+                <source>label.name</source>
+                <target>Tytuł</target>
+            </trans-unit>
+            <trans-unit id="label.description">
+                <source>label.description</source>
+                <target>Opis filmu</target>
+            </trans-unit>
+            <trans-unit id="label.duration">
+                <source>label.duration</source>
+                <target>Czas trwania (min)</target>
+            </trans-unit>
+            <trans-unit id="message.element_successfully_added">
+                <source>message.element_successfully_added</source>
+                <target>Poprawnie dodano nowy element</target>
+            </trans-unit>
+            <trans-unit id="title.movie_edit">
+                <source>title.movie_edit</source>
+                <target>Edytuj film</target>
+            </trans-unit>
+            <trans-unit id="message.element_successfully_edited">
+                <source>message.element_successfully_edited</source>
+                <target>Poprawnie edytowano element</target>
+            </trans-unit>
+            <trans-unit id="title.screening_add">
+                <source>title.screening_add</source>
+                <target>Dodaj seans</target>
+            </trans-unit>
+            <trans-unit id="label.screening_date">
+                <source>label.screening_date</source>
+                <target>Data seansu</target>
+            </trans-unit>
+            <trans-unit id="label.screening_time">
+                <source>label.screening_time</source>
+                <target>Godzina seansu</target>
+            </trans-unit>
+            <trans-unit id="label.id_auditorium">
+                <source>label.id_auditorium</source>
+                <target>Sala</target>
+            </trans-unit>
+            <trans-unit id="label.movie_id">
+                <source>label.movie_id</source>
+                <target>Film</target>
+            </trans-unit>
+            <trans-unit id="label.show_screenings">
+                <source>label.show_screenings</source>
+                <target>Pokaż seanse</target>
+            </trans-unit>
+            <trans-unit id="title.screenings_list">
+                <source>title.screenings_list</source>
+                <target>Lista seansów</target>
+            </trans-unit>
+            <trans-unit id="title.order_add">
+                <source>title.order_add</source>
+                <target>Zamów bilety</target>
+            </trans-unit>
+            <trans-unit id="label.seats_no">
+                <source>label.seats_no</source>
+                <target>Ilość biletów</target>
+            </trans-unit>
+            <trans-unit id="title.screening_edit">
+                <source>title.screening_edit</source>
+                <target>Edytuj seans</target>
+            </trans-unit>
+            <trans-unit id="label.auditoriums">
+                <source>label.auditoriums</source>
+                <target>Sala</target>
+            </trans-unit>
+           <trans-unit id="label.movies">
+                <source>label.movies</source>
+                <target>Film</target>
+            </trans-unit>
+
+            <trans-unit id="message.successfulorder">
+                <source>message.successfulorder</source>
+                <target>Zamówienie złożone poprawnie</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

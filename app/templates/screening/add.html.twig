@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.screening_add'|trans }}{% endblock %}
+
+{% block body %}
+    {% form_theme form with ['bootstrap_4_horizontal_layout.html.twig'] %}
+    <h1>{{ 'title.screening_add'|trans }}</h1>
+    {{ form_start(form, { method: 'post', action: url('screening_add') }) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+    <a href="{{ url('movieList_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-dark">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

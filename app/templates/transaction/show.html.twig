@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.transactions_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        <p class="text-warning"> {{ 'title.transactions_list'|trans }} </p>
+
+    </h1>
+    {% if transactions|length > 0 %}
+        <table class="table table-striped">
+            <tr>
+                <th>Metoda płatności</th>
+                <th>Status płatności</th>
+                <th>ID użytkownika</th>
+                <th>Data zamówienia</th>
+                <th>ID zamówienia</th>
+                <th>Edytuj</th>
+            </tr>
+
+
+            {% for row in transactions %}
+                <tr>
+                    <td>{{ row.method_name}}</td>
+                    <td>{{ row.status_name }}</td>
+                    <td>
+                        {{ row.users_user_id }}
+                    </td>
+                    <td>
+                        {{ row.date}}
+                    </td>
+                    <td>
+                        {{ row.ticket_ticket_id}}
+                    </td>
+                    <td>
+                        <a href="{{ url('transaction_edit', {'id':row.transaction_id}) }}" title="{{ 'label.edit'|trans }}" class="btn btn-warning">
+                            {{ 'label.edit'|trans }}</a>
+                    </td>
+
+                </tr>
+            {% endfor %}
+        </table>
+        <div>
+            <a href="{{ url('movieList_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-dark">
+                {{ 'label.back_to_list'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            List is empty!
+        </div>
+    {% endif %}
+{% endblock %}
